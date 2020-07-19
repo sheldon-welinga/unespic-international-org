@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import { Container, Row, Col } from 'reactstrap';
-import logo from "../images/logo.jpg";
-import Navbar from "react-bootstrap/Navbar";
-import { Nav} from 'react-bootstrap';
-import {NavLink} from "react-router-dom";
+import { Row, Col } from 'reactstrap';
+import {Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import  {FaChevronDown} from "react-icons/fa";
 import Payment from './PaymentForm';
 
 export default class Dashboard extends Component{

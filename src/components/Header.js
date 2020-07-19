@@ -1,13 +1,10 @@
 import React from 'react';
 import {Row} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {FaPhoneAlt, FaRegUser, FaUserCircle} from "react-icons/fa";
+import {FaPhoneAlt, FaRegUser, FaUserCircle, FaHandHoldingUsd, FaSignOutAlt} from "react-icons/fa";
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import {MdLockOpen} from "react-icons/md";
-import {NavLink} from "react-router-dom";
 import {Link} from "react-router-dom";
-import { FaSignOutAlt } from "react-icons/fa";
-import { FaHandHoldingUsd } from "react-icons/fa";
 
 const Header = (props) => {
      //  get all userdetails

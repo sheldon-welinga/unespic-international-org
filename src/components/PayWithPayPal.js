@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import {ListGroup, ListGroupItem} from "react-bootstrap";
 import {withRouter} from "react-router-dom";
+import paypal from "paypal-rest-sdk";
+
+paypal.configure({
+  mode: 'sandbox', // Sandbox or live
+  client_id: 'AWqzIvbbqt-UUoDqyn27eNFCXMzc0A59qzv2E26_09fb72o-Xm7YfNjXrrIMqOu0Rvg-W1ev_6SdZZWZ', //set the client_id from paypall
+  client_secret: 'EJWp-aRSsu2Nf5jR7jmevTHzHjFnF6eoc9e-AUvX3NQNn3dA83YMeDco-I0qfq6bux6WUqXlsVV4Cq_l'}); //set the client_secret from paypall
 
 class PayWithPayPal extends Component {
     constructor(props) {
