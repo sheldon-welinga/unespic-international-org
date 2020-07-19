@@ -19,6 +19,15 @@ class NavbarPage extends Component{
             return child; 
         });
     }
+
+    handleChildClickToggle =(e)=>{
+        let unespicNav = e.target.parentElement.parentElement;
+        unespicNav.classList.toggle("collapse");
+        // let navigationToggle = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+        // navigationToggle.classList.toggle("show");
+        // console.log(navigationToggle);  
+    }
+
     render(){
         return (
             <Navbar collapseOnSelect expand="lg" variant="dark">
@@ -29,27 +38,27 @@ class NavbarPage extends Component{
                         <Nav.Item className="unespic-nav-list"><NavLink to="/">HOME</NavLink></Nav.Item>
                         <Nav.Item className="unespic-nav-list" onClick={this.handleCollapseToggle}><a href="# ">ABOUT &nbsp;<FaCaretDown/></a>
                             <Nav className="ml-auto collapse">
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/about/about-us">About Us</NavLink></Nav.Item>
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/about/mission-and-vision">Mission and Vision</NavLink></Nav.Item>
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/about/become-a-volunteer">Become a Volunteer</NavLink></Nav.Item>
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/about/faqs">FAQS</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/about/about-us">About Us</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/about/mission-and-vision">Mission and Vision</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/about/become-a-volunteer">Become a Volunteer</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/about/faqs">FAQS</NavLink></Nav.Item>
                             </Nav>
                         </Nav.Item>
                         <Nav.Item className="unespic-nav-list" onClick={this.handleCollapseToggle}><a href="# ">WHAT WE DO &nbsp;<FaCaretDown/></a>
                             <Nav className="ml-auto collapse">
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/what-we-do/food-and-nutrition-security">Food and Nutrition Security</NavLink></Nav.Item>
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/what-we-do/water-sanitation-and-hygiene">Water, Sanitation &amp; Hygiene</NavLink></Nav.Item>
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/what-we-do/women-and-girls-economic-empowerment">Women and Girls Economic Empowerment</NavLink></Nav.Item>
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/what-we-do/health">Health</NavLink></Nav.Item>
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/what-we-do/emergency-and-humanitarian-assistance">Emergency and Humanitarian Assistance</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/what-we-do/food-and-nutrition-security">Food and Nutrition Security</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/what-we-do/water-sanitation-and-hygiene">Water, Sanitation &amp; Hygiene</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/what-we-do/women-and-girls-economic-empowerment">Women and Girls Economic Empowerment</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/what-we-do/health">Health</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/what-we-do/emergency-and-humanitarian-assistance">Emergency and Humanitarian Assistance</NavLink></Nav.Item>
                             </Nav>
                         </Nav.Item>
                         
                         <Nav.Item className="unespic-nav-list" onClick={this.handleCollapseToggle}><a href="# ">MEDIA &nbsp;<FaCaretDown/></a> 
                             <Nav className="ml-auto collapse">
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/media/gallery">Gallery</NavLink></Nav.Item>
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/media/videos">Videos</NavLink></Nav.Item>
-                                <Nav.Item className="unespic-nav-list"><NavLink to="/media/news">News</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/media/gallery">Gallery</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/media/videos">Videos</NavLink></Nav.Item>
+                                <Nav.Item className="unespic-nav-list" onClick={this.handleChildClickToggle}><NavLink to="/media/news">News</NavLink></Nav.Item>
                             </Nav>
                         </Nav.Item>
 
