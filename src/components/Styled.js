@@ -829,6 +829,16 @@ ${'' /* Navigation page */}
         font-size: 1.5rem;
         font-weight: 500;
     }
+    
+    .paypal-img-container{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .paypal-img-container .paypal-image{
+        width: 65%;
+    }
 
     ${'' /* End of paypal */}
 

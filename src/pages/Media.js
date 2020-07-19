@@ -16,7 +16,7 @@ const Media = () => {
                 </Row>
                 <div className="gallery">
                 {
-                    gallery.map(item=> <ImageGallery image={item.image} className="gallery-image-container"/>)
+                    gallery.map(item=> <ImageGallery image={item.image} className="gallery-image-container" key={item.id}/>)
                 }
                   
                 </div>

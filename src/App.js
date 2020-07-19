@@ -40,7 +40,12 @@ class App extends Component{
           loggedIn : true,
           username : userData.user.fullname
        })
-   }
+   } else {
+  this.setState({
+    loggedIn : false,
+
+  })   
+  }
  }
 
  logout = e => {
@@ -95,7 +100,6 @@ class App extends Component{
           <div className="App">
               <Header loggedIn = {this.state.loggedIn} username = {this.state.username} logout = {this.logout} handleCollapseToggle = {this.handleCollapseToggle}/>
                <Navbar/>
-              
               <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/our-causes" component={Home} />
@@ -112,7 +116,7 @@ class App extends Component{
                     <Route exact path="/donate-now/login" component={LogIn} />
                     <Route exact path="/contact-us" component={ContactUs} />
                     <Route exact path="/donate/terms-and-conditions-of-use-and-privacy-policy" component={PrivacyPolicy} />
-                    <Route path="/dashboard" component={Dashboard} />
+                    <Route path="/dashboard/donate" component={Dashboard} />
                     <Route path="/donate-now/forgort-password" component={ForgotPassword} />
                     <Route component={ErrorPage} />
               </Switch>

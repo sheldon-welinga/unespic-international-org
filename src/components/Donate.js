@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import PaymentForm from "./PaymentForm";
+import DashboardPaymentForm from "./DashboardPaymentForm";
 
 
 class Donate extends Component {
@@ -116,8 +117,8 @@ class Donate extends Component {
     console.log(loggedIn)
     return (
       <Row className="justify-center">
-        {loggedIn ? <Col lg={11}><Row className="justify-content-center">
-            <Col xs={12} md={10} xl={8} className="donate-header">
+        {loggedIn === true ? <Col lg={11}><Row className="justify-content-center">
+            <Col xs={12}  className="donate-header">
               <h1>Donate Now</h1>
             </Col>
               <Col xs={12} md={8} lg={7} xl={7}>
@@ -125,9 +126,7 @@ class Donate extends Component {
                   <Row className="justify-content-center">
                       <Col xs={12} sm ={3} md={3} lg={3} xl={5} className="Sidebar"></Col>
                       <Col xs={12}  sm={9} md={9} lg={9} xl={7} className="dashboardHeader">
-                        {/* <Row className="justify-content-center">  */}
-                           <PaymentForm/>
-                        {/* </Row> */}
+                           <DashboardPaymentForm />
                       </Col>
                   </Row>
                 </div>

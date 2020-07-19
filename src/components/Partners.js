@@ -11,7 +11,7 @@ const Partners = () => {
            
             <Row className="justify-center">
             <Col lg={11} className="text-center">
-                <p>UNESPIC International Foundation is a charity, nonprofit organisation that works with partners on how to help children, families, and communities throughout Western Kenya.</p>
+                <p>UNESPIC International Foundation is a charity, nonprofit organisation that works with partners on how to help children, families, and communities.</p>
                 </Col>
                 <Col lg={12}>
                     <Row className="justify-content-center">

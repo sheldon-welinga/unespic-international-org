@@ -3,7 +3,7 @@ import PayWithPayPal from "./PayWithPayPal";
 import paypalImg from "../images/paypal.png";
 import data from "../data/data";
 
- class PaymentForm extends Component {
+ class DashboardPaymentForm extends Component {
      constructor(props) {
          super(props)
      
@@ -29,17 +29,12 @@ import data from "../data/data";
         console.log(this.state);
 
         this.setState({
-            // guestname: '',
-            // guestemail: '',
-            // phone: '',
-            // donationFor: 'Food and Nutrition Security',
-            // amount: '',
             isCheckout: true
         })
     }
      
     render() {
-        const {guestname, guestemail, phone, donationFor, amount, isCheckout} = this.state;
+        const {phone, donationFor, amount, isCheckout} = this.state;
         if(isCheckout){
             return <PayWithPayPal total={amount} donationFor={donationFor} />
         }
@@ -49,16 +44,8 @@ import data from "../data/data";
                     <img src={paypalImg} alt="paypall logo" className="paypal-image"/>
                 </div>
                 <div className="form-group">
-                    <input type="name" name="guestname" id="guestname" placeholder="Full Name" className="form-control" value={guestname} onChange={this.handleChange} />
-                    <div className="invalid-feedback">Please fill out your name</div>
-                </div>
-                <div className="form-group">
                     <input type="tel" name="phone" id="phone" placeholder="Phone Number" className="form-control" required value={phone} onChange={this.handleChange} />
                     <div className="invalid-feedback">Please fill out your Phone Number</div>
-                </div>
-                <div className="form-group">
-                    <input type="email" name="guestemail" id="guestemail" placeholder="Email Address" className="form-control" required value={guestemail} onChange={this.handleChange} />
-                    <div className="invalid-feedback">Please fill out your email address</div>
                 </div>
                 <div className="form-group">
                     <label htmlFor="donationFor">Please choose your donation program</label>
@@ -79,4 +66,4 @@ import data from "../data/data";
     }
 }
 
-export default PaymentForm
+export default DashboardPaymentForm;

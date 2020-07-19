@@ -8,16 +8,16 @@ import {Link} from "react-router-dom";
 
 const Header = (props) => {
      //  get all userdetails
-   const userData = JSON.parse(localStorage.getItem("user"))
-   
+//    const userData = JSON.parse(localStorage.getItem("user"))
+
     return (
         <div className='header' >
             <p className="contact"><FaPhoneAlt/> <span>+254 723 767 481 </span></p>
             <Row>
                <div className="loginandsignup">
-                   {userData || props.loggedIn ? <UncontrolledDropdown>
+                   {props.loggedIn ? <UncontrolledDropdown>
                         <DropdownToggle tag="a" className="nav-link loggedInUserDropDown" caret>
-                            <FaUserCircle className="loggedUserIcon"/> {userData.user.fullname || props.username}
+                            <FaUserCircle className="loggedUserIcon"/>{props.username}
                         </DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem >

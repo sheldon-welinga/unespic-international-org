@@ -6,6 +6,7 @@ import  {FaCaretDown} from "react-icons/fa";
 import logo from "../images/logo.jpg";
 
 class NavbarPage extends Component{
+
     //Toggle dropdwon when screen is medium to small
     handleCollapseToggle =(e)=>{
         // console.log(e.target.parentElement);
@@ -53,8 +54,6 @@ class NavbarPage extends Component{
                         </Nav.Item>
 
                         <Nav.Item className="unespic-nav-list"><NavLink to="/contact-us">CONTACT US</NavLink></Nav.Item>
-
-                        {/* <Nav.Item className="unespic-nav-list"><NavLink to="/contact"></NavLink></Nav.Item> */}
                         <Nav.Item className="unespic-nav-list donate"><NavLink to="/donate-now">DONATE</NavLink></Nav.Item>
                     </Nav>
                 </Navbar.Collapse>

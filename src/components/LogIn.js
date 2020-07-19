@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 class LogIn extends Component {
   constructor(props) {
@@ -25,22 +25,22 @@ class LogIn extends Component {
       return false;
     }
 
-    console.log(this.state);
-
     document.getElementById("passwordShort").style.display = "none";
 
     // verifications ok => login user
     const { email, password } = this.state;
     const raw = JSON.stringify({ email, password });
+    
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    const requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+
     fetch("https://unespic.herokuapp.com/api/v1/auth/login", requestOptions)
       .then((res) => {
         this.setState({
@@ -54,7 +54,6 @@ class LogIn extends Component {
       })
       .then((response) => {
         // response = {status: 'success', data: {token: jwtToken, userId: userId, user: {fullname, gender, email}}}
-
         const { data } = response;
 
         // save auth details to localstorage
@@ -64,7 +63,7 @@ class LogIn extends Component {
         
         this.props.history.push("/dashboard/donate");
       })
-      .catch((err) => console.error);
+      .catch((err) => err);
   };
 
   render() {
