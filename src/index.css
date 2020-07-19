@@ -1,0 +1,130 @@
+:root{
+    --blaze-yellow: #fb6107;
+    --minion-yellow: #f3de2c;
+    --apple-green: #7cb518;
+    --avocado: #5c8001;
+    --chinese-yellow: #fbb02d;
+    --text-color: rgb(29, 23, 23);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* color: rgb(255, 137, 137); */
+  
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.footer{
+  background-color: var(--avocado);
+}
+
+.error-page .error{
+  border: 1px solid var(--blaze-yellow);
+}
+
+.error-page .error >h1,
+.error-page .error >p{
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.error-btn{
+  background-color: transparent;
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid var(--blaze-yellow);
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all .4s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.error-btn .error-link{
+  color: var(--blaze-yellow);
+  transition: all .4s ease-in-out;
+}
+
+.error-btn:hover{
+  background-color:  var(--blaze-yellow);
+}
+
+.error-btn:hover > .error-link{
+  color: #fff;
+  text-decoration: none;
+}
+
+.causes .causes-title{
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+.causes #line{
+  background-color: var(--blaze-yellow);
+}
+
+.social .social-facebook:hover{
+  transform: rotate(360deg);
+}
+
+.donate-section-image{
+  background: url(./images/login-image.jpg);
+  min-height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.unespic-nav-list >div{
+  box-shadow: 0 0 5px #999;
+  border-top:2px solid #5c8001;
+}
+.Sidebar{
+  border-right: 1px solid rgb(204, 203, 203);
+  display: none;
+  margin: 30px 0 30px 0
+}
+.loggedUserIcon{
+  font-size: 25px;
+  
+
+}
+.loggedUserIcon{
+  margin-right: 10px !important;
+}
+.loginandsignup .dropdown-toggle::after{
+  margin-left: 20px;
+}
+.profileIcon{
+  color: #4e4e4e !important;
+}
+.myprofile{
+  color: #212529 !important;
+  text-decoration: none;
+}
+.loginandsignup .nav-link{
+padding: 0 !important
+}
+
+
+
+
+
+
+
+
