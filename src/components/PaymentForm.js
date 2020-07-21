@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import PayWithPayPal from "./PayWithPayPal";
 import paypalImg from "../images/paypal.png";
 import data from "../data/data";
+import {withRouter} from "react-router-dom";
+// import {Col, Row} from "react-bootstrap";
+// import ConfirmPayment from './ConfirmPayment';
 
  class PaymentForm extends Component {
      constructor(props) {
          super(props)
      
          this.state = {
-              guestname: '',
-              guestemail: '',
-              phone: '',
+              guestName: '',
+              guestEmail: '',
               donationFor: 'Food and Nutrition Security',
               amount: '',
               isCheckout: false
@@ -26,20 +28,15 @@ import data from "../data/data";
     handleSubmit =(e)=>{
         e.preventDefault();
 
-        console.log(this.state);
-
         this.setState({
-            // guestname: '',
-            // guestemail: '',
-            // phone: '',
-            // donationFor: 'Food and Nutrition Security',
-            // amount: '',
             isCheckout: true
         })
+        // console.log(this.state);
+        
     }
      
     render() {
-        const {guestname, guestemail, phone, donationFor, amount, isCheckout} = this.state;
+        const {guestName, guestEmail, donationFor, amount, isCheckout} = this.state;
         if(isCheckout){
             return <PayWithPayPal total={amount} donationFor={donationFor} />
         }
@@ -48,20 +45,19 @@ import data from "../data/data";
                 <div className="paypal-img-container">
                     <img src={paypalImg} alt="paypall logo" className="paypal-image"/>
                 </div>
-                <div className="form-group">
-                    <input type="name" name="guestname" id="guestname" placeholder="Full Name" className="form-control" value={guestname} onChange={this.handleChange} />
-                    <div className="invalid-feedback">Please fill out your name</div>
+                <hr/>
+                <div className="form-row">
+                    <div className="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" name="guestName" id="guestName" placeholder="Full Name" className="form-control" value={guestName} onChange={this.handleChange} />
+                        <div className="invalid-feedback">Please fill out your full name</div>                    
+                    </div>
+                    <div className="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="email" name="guestEmail" id="guestEmail" placeholder="Email Address" className="form-control" required value={guestEmail} onChange={this.handleChange} />
+                        <div className="invalid-feedback">Please fill out your email address</div>
+                    </div>
                 </div>
                 <div className="form-group">
-                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" className="form-control" required value={phone} onChange={this.handleChange} />
-                    <div className="invalid-feedback">Please fill out your Phone Number</div>
-                </div>
-                <div className="form-group">
-                    <input type="email" name="guestemail" id="guestemail" placeholder="Email Address" className="form-control" required value={guestemail} onChange={this.handleChange} />
-                    <div className="invalid-feedback">Please fill out your email address</div>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="donationFor">Please choose your donation program</label>
+                    <label htmlFor="donationFor">Choose donation programme</label>
                     <select name="donationFor" id="donationFor" value={donationFor} required className="form-control" onChange={this.handleChange} >
                         {
                             data.what_we_do.map((item, index)=><option value={item.title} key={index}>{item.title}</option>)
@@ -69,14 +65,19 @@ import data from "../data/data";
                     </select>
                     <div className="invalid-feedback">Please fill out a donation program</div>
                 </div>
-                <div className="form-group">
-                    <input type="number" name="amount" id="amount" placeholder="Donation Amount" className="form-control" required value={amount} onChange={this.handleChange} />
-                    <div className="invalid-feedback">Please fill out the amount to donate</div>
+                <div className="form-group row justify-center">
+                    <label htmlFor="" className="col-lg-3 col-md-2 col-sm-2 col-xs-2 col-form-label">$USD</label>
+                    <div className="col-lg-5 col-md-6  col-sm-6 col-xs-6">
+                        <input type="number" name="amount" id="amount" placeholder="Amount" className="form-control" required value={amount} onChange={this.handleChange} />
+                        <div className="invalid-feedback">Please fill out the amount</div>
+                    </div> 
                 </div>
-                <button className="btn btn-outline-warning" type="submit">CHECKOUT</button>
+                <div className="submit">
+                    <button className="btn btn-outline-warning" type="submit">CHECKOUT</button>
+                </div> 
             </form>
         )
     }
 }
 
-export default PaymentForm
+export default withRouter(PaymentForm)

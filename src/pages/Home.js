@@ -8,10 +8,8 @@ import Partners from "../components/Partners";
 
 const Home = (props) => {
     // console.log(props);
-   
     return (
         <React.Fragment>
-            
             <HomeVideo />
             <Row className="causes">
                 <Col lg={11}>

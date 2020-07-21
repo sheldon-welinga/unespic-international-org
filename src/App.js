@@ -14,7 +14,7 @@ import SingleAbout from './components/SingleAbout';
 import SingleCause from "./components/SingleCause";
 import Donate from "./components/Donate";
 import BottomFooter from "./components/BottomFooter";
-import LogIn from './components/LogIn';
+import Register from './components/Register';
 import SingleWhatWeDo from './components/SingleWhatWeDo';
 import Videos from "./components/Videos";
 import News from "./components/News";
@@ -22,6 +22,7 @@ import ContactUs from './pages/ContactUs';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Dashboard from './components/dashboard';
 import ForgotPassword from './components/ForgotPassword';
+import ConfirmPayment from './components/ConfirmPayment';
 
 class App extends Component{
  constructor (props){
@@ -31,7 +32,7 @@ class App extends Component{
    }
  }
 
- componentWillMount (){
+ UNSAFE_componentWillMount (){
    //  get all userdetails
    const userData = JSON.parse(localStorage.getItem("user"))
 
@@ -113,7 +114,8 @@ class App extends Component{
                     <Route exact path="/media/videos" component={Videos} />
                     <Route exact path="/media/news" component={News} />
                     <Route exact path="/donate-now" component={Donate}/>
-                    <Route exact path="/donate-now/login" component={LogIn} />
+                    <Route exact path="/donate-now/register" component={Register} />
+                    <Route exact path="/donate-now/confirm-payment" component={ConfirmPayment}/>
                     <Route exact path="/contact-us" component={ContactUs} />
                     <Route exact path="/donate/terms-and-conditions-of-use-and-privacy-policy" component={PrivacyPolicy} />
                     <Route path="/dashboard/donate" component={Dashboard} />

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import defaultImg from "../images/about.jpg";
-import donateImg from "../images/donate-background.jpg";
 import loginImg from "../images/donate-login-background.jpg";
 import contactImg from "../images/contact-header-image.jpg";
 
@@ -30,6 +29,26 @@ ${'' /* Global */}
     .what-we-do{
         margin-top: 10px;
     }
+
+    select{
+        border-radius: 20px;
+        padding: 2px 20px;
+    }
+${'' /* Sucsess and Error  messages */}
+    .submit-success,  .submit-error{
+        margin: 5px 0;
+        padding: 4px 10px;
+        box-sizing: border-box;
+    }
+    .submit-success{
+        background-color:rgb(170, 255, 137);  
+    }
+
+    .submit-error{
+        background-color:rgb(255, 137, 137);
+    }
+
+    ${'' /* End of Sucess and error messages */}
 
     ${'' /* Video container */}
     .section {
@@ -170,11 +189,22 @@ ${'' /*
     }
 
     form{
-            margin: 10px 0 30px 0;
-            border: 1px solid #fb6107;;
-            padding: 20px;
-            border-radius: 20px;
-        }
+        margin: 10px 0 30px 0;
+        box-shadow:0 4px 8px -4px black;
+        padding: 20px;
+        border-radius: 20px;
+        align-item: center;
+        justify-content: center;
+    }
+    form label{
+        margin-left: 5px;
+    }
+    .donate-header-text{
+        margin-top: 20px;
+        text-align: center;
+        color: #888;
+    }
+
     ${'' /* End of Global */}
 
     ${'' /* Top Header */}
@@ -248,7 +278,7 @@ ${'' /* Navigation page */}
             background: #fff;
             box-shadow:0 4px 4px -4px black;
             padding: 10px 10px;
-            margin-bottom: 5px;
+            ${'' /* margin-bottom: 5px; */}
     }
     .navbar-brand, .navbar-nav, .nav-link, .nav-item a{
         color: #5c8001;;
@@ -547,14 +577,45 @@ ${'' /* Navigation page */}
         background-color: #fb6107;
     }
 
+    .or{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: #7cb518;
+    }
+
+    .form-footer{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    #donate input, #donate select{
+        border-radius: 15px;
+    }
+
+    @media screen and (max-width: 991px){
+        .or{
+            flex-direction: row;
+        }
+    }
+
+    .submit{
+        display: flex;
+        justify-content: center;
+    }
     .btn-outline-warning{
-        color:#fbb02d;
-        border-color: #fbb02d;
+        background-color: #fbb02d;
+        color: #fff;
+        padding: 5px 13px;
+        border-radius: 15px;
+        min-width: 150px;
         transition: all .4s ease-in-out;
     }
     .btn-outline-warning:hover{
-        background-color:#fbb02d;
-        color:#fff;
+        color:#fbb02d;
+        background-color:#fff;
     }
 
     ${'' /* End of Read Buttons */}
@@ -603,10 +664,11 @@ ${'' /* Navigation page */}
     }
 
     .partners-img-container .partners-images{
-        transform: scale(.9);
-        opacity: .7;
-        transition: all .4s ease-in-out;
+         width: 55% !important;
+         transition: all .4s ease-in-out;
     }
+
+   
 
     .partners-img-container .partners-images:hover{       
         transform: scale(1.2);  
@@ -669,16 +731,25 @@ ${'' /* Navigation page */}
 
     ${'' /* Donate Page */}
     .donate-header{
-        min-height: 40vh;
-        background: url(${donateImg});
+        min-height: 10vh;
+        background:#5c8001;
         color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+    }
+
+    .donate-header >h4{
+        font-weight: 400;
     }
 
     .donate-header-login{
         background: url(${loginImg}); 
+    }
+
+    .donate-form input{
+        border-radius: 15px;
     }
 
     .forgot-password{
@@ -829,15 +900,15 @@ ${'' /* Navigation page */}
         font-size: 1.5rem;
         font-weight: 500;
     }
-    
+
     .paypal-img-container{
-        align-items: center;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
-    .paypal-img-container .paypal-image{
-        width: 65%;
+    .paypal-image{
+        width: 40%;
     }
 
     ${'' /* End of paypal */}

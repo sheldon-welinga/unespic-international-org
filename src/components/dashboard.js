@@ -31,22 +31,23 @@ import Payment from './DashboardPaymentForm';
       return <Redirect to={'/'} />
     }
       return(
-        
-          <Row className="justify-content-center">
-            <Col xs={12} className="donate-header">
-            <h1>Donate Now</h1>
-          </Col>
-              <Col xs={12} md={8} lg={6} xl={6}>
-              <div className="all-pages-min-height">
-                  <Row className="justify-content-center">
-                      <Col xs={12} sm ={3} md={3} lg={3} xl={5} className="Sidebar"></Col>
-                      <Col xs={12}  sm={9} md={9} lg={9} xl={7} className="dashboardHeader">
-                            <Payment/>
-                      </Col>
-                  </Row>
-                </div>
-              </Col>
-          </Row>
+          <React.Fragment>
+            <div className="donate-header">
+              <h4>DONATE</h4>
+            </div>
+            <Row className="justify-content-center">
+                <Col xs={12} md={8} lg={6} xl={6}>
+                <div className="all-pages-min-height">
+                    <Row className="justify-content-center">
+                        <Col xs={12} sm ={3} md={3} lg={3} xl={5} className="Sidebar"></Col>
+                        <Col xs={12}  sm={9} md={9} lg={9} xl={7} className="dashboardHeader">
+                              <Payment/>
+                        </Col>
+                    </Row>
+                  </div>
+                </Col>
+            </Row>
+          </React.Fragment>
       )
   }
 }

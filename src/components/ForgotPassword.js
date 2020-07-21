@@ -28,7 +28,7 @@ class ForgotPassword extends Component {
         const { email} = this.state;
         return (
             <Row className="justify-center">
-            <Col lg={6} md={8} sm={10}>
+            <Col lg={5} md={7} sm={10}>
                 <div className="all-pages-min-height">
                 <form onSubmit={this.handleSubmit} className="volunteer-form">
                     <div>

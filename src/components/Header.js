@@ -28,8 +28,8 @@ const Header = (props) => {
                     </UncontrolledDropdown>
                     :
                    <div>
-                    <span className="login"><Link to="/donate-now/login"><MdLockOpen /> LOGIN</Link></span>
-                    <span><Link to="/donate-now"><FaRegUser /> REGISTER</Link></span>
+                    <span className="login"><Link to="/donate-now"><MdLockOpen /> LOGIN</Link></span>
+                    <span><Link to="/donate-now/register"><FaRegUser /> REGISTER</Link></span>
                    </div>}
                </div>
             </Row>

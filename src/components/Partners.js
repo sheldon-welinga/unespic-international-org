@@ -14,9 +14,9 @@ const Partners = () => {
                 <p>UNESPIC International Foundation is a charity, nonprofit organisation that works with partners on how to help children, families, and communities.</p>
                 </Col>
                 <Col lg={12}>
-                    <Row className="justify-content-center">
+                    <Row className="justify-content-center partners">
                         {
-                            partners.map((item)=><Col md={3} sm={3} xs={6} key={item.id}>
+                            partners.map((item)=><Col md={3} xs={12} sm={3} lg={2} xl={2} key={item.id}>
                                 <div className="partners-img-container">
                                     <img src={item.partner} alt="" className="img-others-responsive partners-images"/>
                                 </div>
@@ -24,7 +24,6 @@ const Partners = () => {
                         }
                     </Row>
                 </Col>
-               
             </Row>
         </div>
     )
