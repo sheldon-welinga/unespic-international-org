@@ -45,7 +45,6 @@ import {withRouter} from "react-router-dom";
                 <div className="paypal-img-container">
                     <img src={paypalImg} alt="paypall logo" className="paypal-image"/>
                 </div>
-                <hr/>
                 <div className="form-row">
                     <div className="form-group col-md-6 col-sm-6 col-xs-12">
                         <input type="text" name="guestName" id="guestName" placeholder="Full Name" className="form-control" value={guestName} onChange={this.handleChange} />
@@ -62,15 +61,16 @@ import {withRouter} from "react-router-dom";
                         {
                             data.what_we_do.map((item, index)=><option value={item.title} key={index}>{item.title}</option>)
                         }
+                        {
+                            data.news.map((item, index)=><option value={item.title} key={index}>{item.title}</option>)
+                        }
                     </select>
                     <div className="invalid-feedback">Please fill out a donation program</div>
                 </div>
-                <div className="form-group row justify-center">
-                    <label htmlFor="" className="col-lg-3 col-md-2 col-sm-2 col-xs-2 col-form-label">$USD</label>
-                    <div className="col-lg-5 col-md-6  col-sm-6 col-xs-6">
-                        <input type="number" name="amount" id="amount" placeholder="Amount" className="form-control" required value={amount} onChange={this.handleChange} />
-                        <div className="invalid-feedback">Please fill out the amount</div>
-                    </div> 
+                <div className="form-group-row">
+                    <label htmlFor="amount" className="col-form-label">$USD</label>
+                    <input type="number" name="amount" id="amount" placeholder="Amount" className="form-control" required value={amount} onChange={this.handleChange} />
+                    <div className="invalid-feedback">Please fill out the amount</div>
                 </div>
                 <div className="submit">
                     <button className="btn btn-outline-warning" type="submit">CHECKOUT</button>

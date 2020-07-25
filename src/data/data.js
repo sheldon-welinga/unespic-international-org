@@ -255,25 +255,30 @@ export default {
     "news": [
         {
             "id": 1, 
-            "image": news1, 
-            "title": "Rescuing a school girl from early marriage", 
-            "link": "https://gogetfunding.com/rescuing-a-school-going-girl-from-early-marriage/",
-            "content": "This has been occasioned by the poverty of the parents who married her off to get dowry"
+            "image": news1,
+            "single_news": "rescuing-a-school-girl-from-early-marriage", 
+            "title": "Rescuing a School Girl From Early Marriage", 
+            "content": "This has been occasioned by the poverty of the parents who married her off to get dowry",
+            "description": ["The above girl in the picture is a form two school Girl. She has been rescued from an early forced Marriage. she is currently staying with a pastor (2nd from Right).",
+            "This has been occasioned by the poverty of the parents who married her off to get dowry in form of Cattle.For this reason,we are requesting well wishers to help raise funds to help the Girl continue with her Education,cater for her accommodation away from their home until she completes her Education and help start for their parents some small business so that they can sustain themselves"]
         },
         {
             "id": 2, 
-            "image": news2, 
-            "title": 
-            "A widow a better a better house", 
-            "link": "https://gogetfunding.com/a-widow-a-better-house/",
-            "content": "Maria is a young widow who lives in Gilgil Area ,Kenya. She became widow after"
+            "image": news2,
+            "single_news": "a-widow-a-better-house", 
+            "title":"A Widow a Better House", 
+            "content": "Maria is a young widow who lives in Gilgil Area ,Kenya. She became widow after",
+            "description": ["Maria is a young widow who lives in Gilgil Area ,Kenya. She became widow after her husband died after a long battle with Asthma.She has seven school going children who she was left behind with.The first born is 15 years and the the last born 3 years.The late husband was the bread winner. She has struggled to keep and feed the family out doing household chores. Due the current Pandemic of Covid 19,she cannot afford to feed the family since she lost her job and worse still the house has become inhabitable and poses a greater risk.",
+            "We plead with well wishers to give whatever the lord will put in your hand to give a smile to this family"]
         },
         {
             "id": 3,
-            "image": news3, 
-            "title": "Help street girl better life", 
-            "link": "https://www.givingway.com/project/6cd76d",
-            "content": "This young girl lost her Mother several years ago. The parent was"
+            "image": news3,
+            "single_news": "help-street-girl-better-life", 
+            "title": "Help Street Girl Better Life", 
+            "content": "This young girl lost her Mother several years ago. The parent was",
+            "description": ["This young girl who lost her Mother several years ago. The parent was a single parent. She comes from Narok Kenya, but moved to street life in Naivasha Kenya.The challenges of life forced her to the streets to survive.We have talked to the girl and she is more willing to settle in life.",
+            "Her wish is if she can enrol in a beauty college for some training because she is talented in plaiting of hair then after the course,open a salon so that she can sustain herself"]
         }
     ]
 

@@ -51,15 +51,16 @@ import data from "../data/data";
                         {
                             data.what_we_do.map((item, index)=><option value={item.title} key={index}>{item.title}</option>)
                         }
+                        {
+                            data.news.map((item, index)=><option value={item.title} key={index}>{item.title}</option>)
+                        }
                     </select>
                     <div className="invalid-feedback">Please fill out a donation program</div>
                 </div>
-                <div className="form-group row justify-center">
-                    <label htmlFor="" className="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-form-label">$USD</label>
-                    <div className="col-lg-6 col-md-6  col-sm-6 col-xs-6">
-                        <input type="number" name="amount" id="amount" placeholder="Amount" className="form-control" required value={amount} onChange={this.handleChange} />
-                        <div className="invalid-feedback">Please fill out the amount</div>
-                    </div> 
+                <div className="form-group-row">
+                    <label htmlFor="amount" className="col-form-label">$USD</label>
+                    <input type="number" name="amount" id="amount" placeholder="Amount" className="form-control" required value={amount} onChange={this.handleChange} />
+                    <div className="invalid-feedback">Please fill out the amount</div>
                 </div>
                 <div className="input-group">
                   <label>

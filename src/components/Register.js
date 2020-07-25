@@ -65,8 +65,47 @@ class Register extends Component {
             check: false,
           });
           if (res.ok) {
-            console.log(res)
-            this.props.history.push("/dashboard/donate");
+            // console.log(res)
+                        // after success register login user direct using password and email in the state
+              const raw = JSON.stringify({ email, password });
+            
+              const myHeaders = new Headers();
+              myHeaders.append("Content-Type", "application/json");
+              const requestOptions = {
+                    method: "POST",
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: "follow",
+              };
+            
+              fetch("https://unespic.herokuapp.com/api/v1/auth/login", requestOptions)
+                  .then((res) => {
+                      this.setState({
+                      email: "",
+                      password: "",
+                });
+                if (res.ok) {
+                     return res.json();
+                }
+                throw new Error(res.statusText);
+               })
+                .then((response) => {
+                  // response = {status: 'success', data: {token: jwtToken, userId: userId, user: {fullname, gender, email}}}
+                   const { data } = response;
+            
+                   // save auth details to localstorage
+                    delete data.message;
+            
+                    localStorage.setItem("user", JSON.stringify(data));
+                            
+                    this.props.history.push("/dashboard/donate");
+                })
+                .catch((err) => {
+                   this.setState({
+                         error: true
+                  }, ()=> console.log(err))
+                            // console.log(err);
+               });            
           }
         })
         .catch((err) => {

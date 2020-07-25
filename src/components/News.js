@@ -1,6 +1,7 @@
 import React from 'react';
 import {Col, Row} from "react-bootstrap";
 import data from "../data/data";
+import {Link} from "react-router-dom";
 import {BsArrowRight} from "react-icons/bs";
 
 
@@ -23,11 +24,11 @@ const News = () => {
                                 <div className="news-container">
                                     <h5>{item.title}</h5>
                                     <div className="news-image-container">
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                        <Link to ={`/media/news/${item.single_news}`}>
                                             <img src={item.image} alt={item.title} className="img-others-responsive"/>
-                                        </a>
+                                        </Link>
                                     </div>
-                                    <p>{item.content} <a href={item.link}>Continue reading <BsArrowRight /></a></p>  
+                                    <p>{item.content} <Link to={`/media/news/${item.single_news}`}>Continue reading <BsArrowRight /></Link></p>  
                                 </div>
                             </Col>
                             ))

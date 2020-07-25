@@ -143,7 +143,7 @@ class Donate extends Component {
                       <h5 className="donate-header-text">Donate as a Guest</h5>
                       <PaymentForm />
                     </Col>
-                    
+
                     <Col lg={1} className="or">
                       <h5>Or</h5>
                     </Col>
@@ -154,13 +154,11 @@ class Donate extends Component {
                       </div>
                     <form onSubmit={this.handleSubmit} className="donate-form">
                       <div className="form-group">
-                          <h5 className="donate-header-text">LOGIN</h5>
+                          <h5 className="donate-header-text login">LOGIN</h5>
                       </div>
                       <div className="form-group">
                         <input type="email" name="email" id="email" placeholder="Email Address" className="form-control" required value={email} onChange={this.handleChange}/>
-                        <div className="invalid-feedback">
-                          Please fill out your email address
-                        </div>
+                        <div className="invalid-feedback">Please fill out your email address</div>
                       </div>
                       <div className="form-group">
                         <input type="password" name="password" id="password" placeholder="Password" className="form-control" required value={password} onChange={this.handleChange}/>

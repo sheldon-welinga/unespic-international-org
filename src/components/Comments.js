@@ -96,21 +96,11 @@ class Comments extends Component {
                 this.state.error && <div className="submit-error">{this.state.errorMessage}</div>
             }
         <div className="form-row">
-          <textarea
-            name="comment"
-            id="comment"
-            cols="30"
-            rows="4"
-            className="form-control"
-            placeholder="Comment here"
-            required
-            value={this.state.comment}
-            onChange={this.handleChange}
-          ></textarea>
+          <textarea name="comment" id="comment" cols="30" rows="4" className="form-control" placeholder="Comment here" required value={this.state.comment} onChange={this.handleChange}></textarea>
         </div>
-        <button type="submit" className="btn btn-outline-success">
-          POST A COMMENT
-        </button>
+        <div className="submit">
+            <button type="submit" className="btn btn-outline-success">POST A COMMENT</button>
+        </div>
       </form>
     );
   }

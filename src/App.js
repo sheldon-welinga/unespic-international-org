@@ -23,6 +23,8 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import Dashboard from './components/dashboard';
 import ForgotPassword from './components/ForgotPassword';
 import ConfirmPayment from './components/ConfirmPayment';
+import ResetPassword from './components/ResetPassword';
+import SingleNews from "./components/SingleNews";
 
 class App extends Component{
  constructor (props){
@@ -113,13 +115,15 @@ class App extends Component{
                     <Route exact path="/media/gallery" component={Media} />
                     <Route exact path="/media/videos" component={Videos} />
                     <Route exact path="/media/news" component={News} />
+                    <Route exact path="/media/news/:single_news" component={SingleNews} />
                     <Route exact path="/donate-now" component={Donate}/>
                     <Route exact path="/donate-now/register" component={Register} />
                     <Route exact path="/donate-now/confirm-payment" component={ConfirmPayment}/>
                     <Route exact path="/contact-us" component={ContactUs} />
                     <Route exact path="/donate/terms-and-conditions-of-use-and-privacy-policy" component={PrivacyPolicy} />
-                    <Route path="/dashboard/donate" component={Dashboard} />
-                    <Route path="/donate-now/forgort-password" component={ForgotPassword} />
+                    <Route exact path="/dashboard/donate" component={Dashboard} />
+                    <Route exact path="/donate-now/forgort-password" component={ForgotPassword} />
+                    <Route exact path="/donate-now/confirm-new-password" component={ResetPassword} />
                     <Route component={ErrorPage} />
               </Switch>
               <BottomFooter />

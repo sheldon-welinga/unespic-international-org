@@ -62,13 +62,13 @@ class PayWithPayPal extends Component {
         if(paid){
             return <div className="success-donation">
                 <h3>Your donation for {donationFor} was received sucessfully.</h3>
-                <h6>Thank you for making your donation</h6>
+                <h6>Thank you for donating with us/</h6>
             </div>
         }
             
         if(error){
             return <div className="error-donation">
-                <h3>An error  while processing your payment.</h3> 
+                <h3>An error occurred while processing your payment.</h3> 
                 <h6>Please try again</h6>
             </div>
         }
@@ -77,7 +77,7 @@ class PayWithPayPal extends Component {
             <div>
                 <ListGroup>
                     <ListGroupItem >
-                        <h4>{donationFor}</h4>
+                        <h5>{donationFor}</h5>
                         <div>Donation Amount - ${total}</div>
                         <div ref={payPalRef}></div>
                     </ListGroupItem>   

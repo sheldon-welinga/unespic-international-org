@@ -195,14 +195,47 @@ ${'' /*
         border-radius: 20px;
         align-item: center;
         justify-content: center;
+        font-family: Arial;
     }
     form label{
         margin-left: 5px;
+    }
+
+    form .login{
+        margin-bottom: 30px;
     }
     .donate-header-text{
         margin-top: 20px;
         text-align: center;
         color: #888;
+    }
+    .form-group-row{
+        display: flex;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-group-row .col-form-label{
+        margin-right:10px; 
+        padding-left: 20px;
+        display: inline-flex;
+    }
+
+    .form-group-row  input{
+        width: 30%;
+    }
+
+    @media screen and (max-width: 450px){
+        .form-group-row{
+            flex-direction: column;
+        }
+        .form-group-row .col-form-label{
+            width: 100%;
+            justify-content: center;
+        }
+        .form-group-row  input{
+            width: 100%;
+        }
     }
 
     ${'' /* End of Global */}
@@ -479,28 +512,45 @@ ${'' /* Navigation page */}
         position: relative;
         padding-bottom: .8rem;
     }
+
+    .news-title{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+
+    .news-section{
+        box-shadow:0 4px 8px -4px black;
+        min-height: 40%;
+        padding: 5px;
+        margin-top: 45%;
+        overflow: hidden;
+    }
+
+    .news-donate{
+        width: 100%;
+        padding: 20px auto;
+        ${'' /* font-size: 10%; */}
+    }
+
+    .news-description{
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: 767px){
+        .news-section{
+            margin-top: 0;
+        }
+        .news-title{
+            font-size: 1.2rem;
+        }
+    }
    ${'' /* End of Causes */}
  
     ${'' /* Read and Donate Buttons */}
     .read-more{
         margin: 10px 0;
     }
-    .volunteer-form .btn-outline-primary:hover{
-        background-color : #fbb02d;
-        color: #fff
-    }
-    .contact .btn-outline-primary:hover{
-        background-color : #fbb02d;
-        color: #fff
-    }
-    .contact .btn-outline-primary{
-        border : 1px solid #fbb02d;
-        color : #fbb02d;
-    }
-    .volunteer-form .btn-outline-primary{
-        border : 1px solid #fbb02d;
-        color: #fbb02d;
-    }
+    
     .read-more, 
     .donate-now{
         background-color: transparent;
@@ -544,13 +594,13 @@ ${'' /* Navigation page */}
         color: #fff;
     }
 
-    .donateBtn{
+    .donateBtn, .news-donate{
         position: static;
         margin-bottom: 30px;
         border-color:#fb6107;
         background-color:#fbb02d;
     }
-    .donateBtn a{
+    .donateBtn a, .news-donate a{
         color:#fff;
         transition: all .4s ease-in-out;
     }
@@ -631,7 +681,7 @@ ${'' /* Navigation page */}
     ${'' /* End of about */}
 
     ${'' /* Features */}
-        .features-title, .partners .partners-title{
+        .features-title, .partners .partners-title, .news-title{
             color: #fb6107;
             margin-top: 16px;
         }
@@ -667,8 +717,6 @@ ${'' /* Navigation page */}
          width: 55% !important;
          transition: all .4s ease-in-out;
     }
-
-   
 
     .partners-img-container .partners-images:hover{       
         transform: scale(1.2);  
